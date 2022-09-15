@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+ In insertionPage
+ {% endblock %}
+
+ {% block content %} 
+<li> 
+    <h2>Enter Values</h2>
+    <form action="/addTodoItem/" method = "post">{% csrf_token %}
+        <label><b>Enter Content</b></label>
+        <input type="text" name="content"><br></br>
+        <label><b>Enter rating</b></label>
+        <input type="Integer" name ="rating"><br></br>
+        <label><b>Enter value</b></label>
+        <input type="Integer" name ="value"><br></br>
+
+        <br><input type="submit" value="Add Todo Item"></br>
+    </form>
+    </li>
+<ul>
+{% endblock %}

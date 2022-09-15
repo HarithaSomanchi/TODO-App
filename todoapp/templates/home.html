@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+ In HomePage
+ {% endblock %}
+
+ {% block content %} 
+
+<h1>Welcome to TODO<h1>
+{% if user.is_authenticated %}
+<h2>Hello ,{{user.username}}</h2>
+<h1><li><a href="/logout/">"Logout"</a></li></h1>
+{% endif %}
+<center>
+<li><a href="/insertion/">"Insertion"</a></li>
+<li><a href="/delete/">"Deletion"</a></li>
+<li><a href="/viewdata/">"View Data"</a></li>
+</center>
+
+{% endblock %}
+

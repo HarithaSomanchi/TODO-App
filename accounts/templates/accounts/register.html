@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+ In RegistrationPage
+ {% endblock %}
+
+ {% block content %} 
+<li> 
+    <h2>Enter Values</h2>
+    <form action="/register/" method = "post">{% csrf_token %}
+        <label><b>Enter UserName</b></label>
+        <input type="text" name="username"><br></br>
+        <label><b>Enter Password</b></label>
+        <input type="Password" name ="password"><br></br>
+        <label><b>Enter Phonenumber</b></label>
+        <input type="Integer" name ="phonenumber"><br></br>
+
+        <br><input type="submit" value="Submit"></br>
+    </form>
+    </li>
+<ul>
+{% endblock %}

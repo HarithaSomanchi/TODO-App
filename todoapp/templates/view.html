@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+ In ViewPage
+ {% endblock %}
+
+{% block content %} 
+<h1>Content in TODO</h1>
+    <ul>
+        <li><b> Data By {{author}} is:</li></b>
+        {% for i in all_items %} 
+        <li><b>"{{i.content}}"  rating is ({{i.rating}})  value is ({{i.value}})</b>
+        </li>
+        {% endfor %}
+    </ul> 
+<li><a href="/home/"><b>"Main"</b></a></li>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+ In DeletePage
+{% endblock %}
+
+{% block content %} 
+<ul>
+    
+        <form action="/deleteTodoItem/" method = "post">{% csrf_token %}
+            <label><b>Enter value to be deleted</b></label>
+            <input type="Integer" name="value"><br></br>
+            <input type="submit" value="Delete">
+        </form><br>
+    
+  
+</ul> 
+
+{% endblock %}
