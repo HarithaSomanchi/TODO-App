@@ -13,4 +13,14 @@ class TodoListItem(models.Model):
     
     def __str__(self):
          return f"{self.content},{self.rating}"
+     
+class Books(models.Model):
+    title = models.TextField()
+    pages = models.IntegerField()
+    
+    def __str__(self):
+        return f"{self.title}"
+
+    
+    
 

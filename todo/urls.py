@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("todoapp.urls")),
     path('',include("accounts.urls")),
+     path('',include("books.urls")),
      #path('insertion/',insertion),
     # path('delete/',delete),
     #path('viewdata/',todoappView),

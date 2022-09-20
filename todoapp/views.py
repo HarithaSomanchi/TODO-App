@@ -1,8 +1,11 @@
 from django.shortcuts import render
-from .models import TodoListItem 
+from .models import TodoListItem ,Books
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+
+from django.views import View
 # Create your views here.
+
 
 def todoappView(request):
     instance = request.user
@@ -56,3 +59,6 @@ def delete(request):
     return render(request,"todo.html", {'all_items':all_todo_items})
 def home(request):
     return render(request,"home.html")
+
+
+

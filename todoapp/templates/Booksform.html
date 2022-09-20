@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+ In HomePage
+ {% endblock %}
+
+ {% block content %} 
+
+<h1>BOOKS FORM<h1>
+{% if user.is_authenticated %}
+<h2>Hello ,{{user.username}}</h2>
+{% endif %}
+<form action="/addbook/" method = "post">{% csrf_token %}
+    {{form}}
+    <br><input type="submit" value="Submit"></br>
+</form>
+{% endblock %}
